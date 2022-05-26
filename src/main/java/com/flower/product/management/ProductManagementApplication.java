@@ -1,13 +1,13 @@
-package com.example.productmanagementapi;
+package com.flower.product.management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class ProductManagementApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(ProductManagementApplication.class, args);
 	}
 
 }
