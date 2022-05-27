@@ -28,6 +28,8 @@ jobs:
         name: Get Release Version
         run: |
           ./mvnw release:prepare -DdryRun=true
+        env:
+          SPRING_PROFILES_ACTIVE: "test"
       - id: artifact-id
         name: Get Artifact Id
         run: |
@@ -39,6 +41,8 @@ jobs:
       - id: cleanup
         name: Reverse release dry run
         run: ./mvnw release:clean
+        env:
+          SPRING_PROFILES_ACTIVE: "test"
 
   release:
     runs-on: ubuntu-latest
