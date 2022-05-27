@@ -27,7 +27,7 @@ jobs:
       - id: release-version
         name: Get Release Version
         run: |
-          ./mvnw release: prepare -DdryRun=true
+          ./mvnw release:prepare -DdryRun=true
       - id: artifact-id
         name: Get Artifact Id
         run: |
