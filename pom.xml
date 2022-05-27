@@ -137,6 +137,9 @@
 					<to>
 						<image>anthonyikeda/product-management-api:${project.version}</image>
 					</to>
+					<from>
+						<image>eclipse-temurin:18-jre</image>
+					</from>
 					<container>
 						<creationTime>USE_CURRENT_TIMESTAMP</creationTime>
 					</container>
