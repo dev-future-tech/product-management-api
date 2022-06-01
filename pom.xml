@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.flower.product</groupId>
 	<artifactId>product-management-api</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.3</version>
 	<name>Product Management API</name>
 	<description>API for the management of products</description>
 	<properties>
@@ -28,7 +28,7 @@
 	<scm>
 		<connection>scm:git:${project.scm.url}</connection>
 		<url>https://github.com/dev-future-tech/product-management-api.git</url>
-		<tag>HEAD</tag>
+		<tag>0.0.3</tag>
 	</scm>
 
 
