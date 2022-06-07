@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-management-api
+  namespace: product-ns
+spec:
+  selector:
+    matchLabels:
+      name: product-management-api
+  template:
+    metadata:
+      labels:
+        name: product-management-api
+    spec:
+      containers:
+        - name: product-mgmt-api
+          image: anthonyikeda/product-management-api:0.0.3
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+            - containerPort: 8091
+          readinessProbe:
+            httpGet:
+              port: 8091
+              path: /actuator/health/readiness
+            initialDelaySeconds: 3
+            periodSeconds: 3
+          livenessProbe:
+            httpGet:
+              port: 8091
+              path: /actuator/health/liveness
+            initialDelaySeconds: 3
+            periodSeconds: 3
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: default
+            - name: SPRING_RABBITMQ_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: product-mgmt-config
+                  key: rabbitmq_host
+

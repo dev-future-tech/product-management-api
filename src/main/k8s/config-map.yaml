@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: product-mgmt-config
+  namespace: product-ns
+data:
+  rabbitmq_host: 'host.minikube.internal'
